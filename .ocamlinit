@@ -1,0 +1,4 @@
+(* The following statements will be executed by utop when it starts. *)
+
+open Lab1ocaml_sec.Lambda
+open Lab1ocaml_sec.Arithmetic
