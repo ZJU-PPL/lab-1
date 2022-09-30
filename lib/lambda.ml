@@ -302,7 +302,9 @@ let rec subst_bound (a : term) (b : term) : term = raise Todo
 (* 
 接下来就是激动人心的 normalization 了!
 
-请先阅读助教写的讲义 (supplement 2) 了解 normalization,
+请阅读这份非常棒的讲义的第 8 节来了解 normalization :
+- http://www.cs.cmu.edu/~rwh/pfpl/supplements/ulc.pdf
+
 然后阅读这部份的说明 (supplement 3), 了解具体实现上的问题.
 
 *)

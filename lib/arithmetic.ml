@@ -36,7 +36,7 @@ let lam t = Lam t
 exception InvalidArgument of string
 
 (* 
-请先阅读 supplement 4 的 1.4 ~ 1.8 节 (布尔值 ~ 自然数),
+请先阅读 supplement 4 的 1.4 节 (布尔值 ~ 自然数),
 了解这部份我们要干什么.
 *)
 
