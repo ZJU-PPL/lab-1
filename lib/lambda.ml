@@ -12,6 +12,9 @@ open Base
 [@@@warning "-32"]
 [@@@warning "-39"] 
 
+(* 请在这里填入你的学号，用来登记得分。 *)
+let my_student_id = "3001234567"
+
 (* Todo 是一个 "异常". 如果你不了解 OCaml 中的异常, 你可以
    + 与 Python 中的 Exception, C++ 中的异常类比. 但要注意, OCaml 中的异常与前两者的异常有很大的区别, 区别就在于它是一等公民.
      所有异常的类型都是 exn, 所以 Todo : exn. 你可以定义接收 exn 值的函数 f : exn -> int -> int. 总之就是, 异常可以像

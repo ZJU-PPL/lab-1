@@ -30,6 +30,8 @@ setup.log
 # Local OPAM switch
 _opam/
 
+.ocamlinit
+
 # The following is for VS Code
 
 .vscode/
