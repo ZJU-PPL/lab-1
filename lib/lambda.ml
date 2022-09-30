@@ -12,7 +12,8 @@ open Base
 [@@@warning "-32"]
 [@@@warning "-39"] 
 
-(* 请在这里填入你的学号，用来登记得分。 *)
+(* 请在这里填入你的学号。
+   你的学号和 GitHub 帐号会用来登记你的得分。 *)
 let my_student_id = "3001234567"
 
 (* Todo 是一个 "异常". 如果你不了解 OCaml 中的异常, 你可以
@@ -149,7 +150,6 @@ exception BadRepresentation of string
    你可以使用下面的框架, 也可以不使用. 但你需要保证 to_locally_nameless 的类型是 C.term -> term.
    *)
 
-(* need test: 10 *)
 (* 删掉 [ Var (Free "_") ], 取消下面的注释  *)
 let to_locally_nameless (t : C.term) : term = Var (Free "_")
   (* let rec aux t d m : term =
@@ -227,7 +227,7 @@ end
      核心其实是这个: 请问 "=" 是什么? 就是一个普通的函数! 只是它长成运算符的样子而已.
 *)
 
-(* need test: 2 *)
+(* 完成 Todo 部分！ *)
 let rec syn_equal (t : term) (t' : term) : bool =
   match t , t' with
   | Var (Bound k) , Var (Bound k') -> k = k'
@@ -243,7 +243,6 @@ let rec syn_equal (t : term) (t' : term) : bool =
    组成一个 list (不需要排序或者去除重复, 只要这个 list 包含且仅包含所有的
    free variables 即可). *)
 
-(* need test: 4 *)
 let rec free_var (t : term) : string list = raise Todo
 
 (* 下面要做的是 to_locally_nameless 的反向, 即
@@ -274,7 +273,6 @@ let rec free_var (t : term) : string list = raise Todo
 
    *)
 
-(* need test: 10 *)
 let from_locally_nameless (t : term) : C.term = raise Todo
 
 (* write a QuickCheck to check 
