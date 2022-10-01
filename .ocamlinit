@@ -1,0 +1,4 @@
+(* The following statements will be executed by utop when it starts. *)
+
+open Lab1.Lambda
+open Lab1.Arithmetic
