@@ -8,7 +8,7 @@ open Lambda
 (* 定义
 
 k = λ x . λ y . x
-s = λ x . λ y . λ z . (x y) (x z)
+s = λ x . λ y . λ z . (x z) (y z)
 
 上面定义的两个 lambda term 分别叫做 k combinator 和 s combinator.
 
