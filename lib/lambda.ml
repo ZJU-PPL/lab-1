@@ -156,7 +156,7 @@ let to_locally_nameless (t : C.term) : term = Var (Free "_")
     match t with
     | C.Var s -> raise Todo
     | C.Lam (s , t') -> raise Todo
-    | Ap (t1 , t2) -> raise Todo
+    | C.Ap (t1 , t2) -> raise Todo
     in 
   aux t 0 (Map.empty (module String)) *)
 
