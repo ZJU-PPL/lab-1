@@ -63,8 +63,8 @@ let lam t = Lam t
 (* k = λ x . λ y . x *)
 let k = clam "x" @@ clam "y" @@ Var "x" |> to_locally_nameless
 
-(* s = λ x . λ y . λ z . (x y) (x z) *)
-let s = clam "x" @@ clam "y" @@ clam "z" @@ ((Var "x" $$ Var "z") $$ (Var "x" $$ Var "z")) |> to_locally_nameless
+(* s = λ x . λ y . λ z . (x z) (y z) *)
+let s = clam "x" @@ clam "y" @@ clam "z" @@ ((Var "x" $$ Var "z") $$ (Var "y" $$ Var "z")) |> to_locally_nameless
 
 (* 一个比较 C.term 和 term 是否等价的函数, 只是 equiv 和 to_locally_nameless 的包装, 方便一些. *)
 let test ct t = equiv (to_locally_nameless ct) t
